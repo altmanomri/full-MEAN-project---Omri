@@ -1,0 +1,23 @@
+<div class="newUserDiv">
+    <div class="blackLine">
+    </div>
+    <!-- details -->
+    <div class="detailsContainer">
+        <!-- header -->
+        <div class="header">Please enter your name and email:</div>
+        <!-- form -->
+        <div class="detailsDiv">
+            <div class="nameEmail">
+                Name:<br />
+                Email:<br />
+            </div>
+            <div class="inputsDiv">
+                <input required [(ngModel)]="newUser.name" type="text" name="name" /><br />
+                <input required [(ngModel)]="newUser.email" type="text" name="email" /><br />
+            </div>
+        </div>
+
+    </div>
+    <button class="btns" (click)="cancel()">Cancel</button>
+    <button class="btns" (click)="addUser()">Add</button>
+</div>

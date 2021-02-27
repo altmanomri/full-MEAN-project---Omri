@@ -1,0 +1,26 @@
+<div class="userListContainer">
+    <div class="searchDiv">
+        <img class="searchPic"
+            src="https://cdn1.iconfinder.com/data/icons/interaction-24/80/profile__search__account__user__male-512.png" />
+        <span class="searchText">SEARCH:</span>
+        <input class="inputSearch" placeholder="By name or Email" (click)="inputPress()" [(ngModel)]="searchInput"
+            (ngModelChange)="search($event)"> &nbsp;&nbsp;
+        <button class="addUser" (click)="createNewUserComp()"><img class="addUserLogo"
+                src="https://www.freeiconspng.com/uploads/user-add-icon---shine-set-add-new-user-add-user-30.png" />Add-User</button>
+    </div>
+
+    <div class="userBox">
+        <app-user [userData]="user" [allUsers]="users" *ngFor="let user of users;let i =index"></app-user>
+    </div>
+    
+    <!-- in case of no users => display message -->
+    <div class="noUserDiv" *ngIf="isAddExist">
+        <h3 class="addH">The user list is empty</h3>
+        <p class="addP">To add new user press the button Add-User</p>
+    </div>
+
+    <div *ngIf="hideTP">
+        <app-todos-and-posts *ngFor="let user of users"></app-todos-and-posts>
+    </div>
+</div>
+

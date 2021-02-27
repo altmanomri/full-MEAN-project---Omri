@@ -1,0 +1,34 @@
+<div class="tpBox">
+
+    <button class="closeBtn" (click)="closeBtn()">X</button>
+    <h2>Todo-list for user <span class="userName">{{user?.name}}</span> </h2>
+    <div *ngIf="!addTaskFlag">
+        <button class="addBtns" (click)="changeFlag()">ADD TASK</button>
+        <div class="taskBox" *ngFor="let task of tasks; let todoIndex = index">
+            <app-task [todoIndex]="todoIndex" [updateUser]="updateUser" [user]="user" [tasks]="tasks" [task]="task">
+            </app-task>
+        </div>
+    </div>
+
+    <div class="addBoxDiv" *ngIf="addTaskFlag">
+        <h2>Add New Task:</h2>
+       <div class="textBox">Tile: <input type="text" [(ngModel)]="newTask.title"></div> 
+        <button class="addBtns" (click)="addTask()">Add</button>
+        <button class="addBtns" (click)="changeFlag()">Cancel</button>
+    </div>
+
+    <div>
+        <h2>Post-list for user <span class="userName">{{user?.name}}</span></h2>
+        <button *ngIf="!addPostFlag" class="addBtns" (click)="changePostFlag()">ADD POST</button>
+        <div class="addBoxDiv" *ngIf="addPostFlag">
+            <h2>Add New Post:</h2>
+          <div class="textBox">Title: <input type="text" [(ngModel)]="newPost.title"></div>  
+          <div class="textBox"> Description: <input type="text" [(ngModel)]="newPost.body"></div> 
+            <button class="addBtns" (click)="addPost()">Add</button>
+            <button class="addBtns" (click)="changePostFlag()">Cancel</button>
+        </div>
+        <!-- <div class="postBox"> -->
+        <app-post *ngFor="let post of posts" [user]="user" [post]="post"></app-post>
+
+    </div>
+</div>

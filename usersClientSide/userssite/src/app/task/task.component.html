@@ -1,0 +1,6 @@
+
+<div>
+<b>Title :</b> {{task.title}}<br/>
+<b>completed :</b> {{task.completed}}
+<input *ngIf="!task.completed" type="button" value="Mark Completed" (click)="markCompleted(todoIndex)" />
+</div>

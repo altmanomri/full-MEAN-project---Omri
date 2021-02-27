@@ -1,0 +1,68 @@
+
+.userListContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.userBox{
+    margin-top: 80px;
+}
+.searchDiv {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  position: absolute;
+  left: 5%;
+  width: 100%;
+  justify-content: center;
+}
+.searchText {
+  font-size: 26px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.searchPic {
+  width: 40px;
+  height: 40px;
+}
+.addUserLogo{
+    width: 40px;
+    height: 40px;
+}
+.addUser {
+    cursor: pointer;
+  background-image: linear-gradient(rgb(182, 214, 197), rgb(230, 248, 201));
+  margin-left: 50px;
+  width: 150px;
+  height: 60px;
+  font-size: 20px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+.addUser:hover {
+  background-image: linear-gradient(rgb(245, 255, 200), rgb(250, 214, 200));
+}
+.inputSearch{
+    width: 300px;
+    height: 40px;
+    font-size: 24px;
+    align-items: center;
+    border-style: solid;
+    padding: 10px;
+}
+.addH{
+font-size: 20px;
+text-decoration: underline;
+}
+.addP{
+    font-size: 19px;
+}
+.noUserDiv{
+    text-align: center;
+    border-style: solid;
+    padding: 20px;
+    border-color: brown;
+    margin-top: 100px;
+}

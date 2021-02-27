@@ -1,0 +1,56 @@
+.tpBox
+{
+    border-style: solid;
+    border-color: purple;
+    border-width: 2px;
+    margin-bottom: 10px;
+    padding:10px;
+    width: 70%;
+    /* position: absolute; */
+    /* left: 39%; */
+}
+.taskBox
+{
+    border-style: solid;
+    border-color: purple;
+    border-width: 2px;
+    margin-bottom: 10px;
+    width: 90%;
+    padding:10px;
+
+}
+.postBox
+{
+    border-style: solid;
+    border-color: green;
+    border-width: 2px;
+    margin-bottom: 10px;
+    padding:20px;
+    width: 90%;
+
+}
+.closeBtn{
+    float: right;
+    height: 30px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(24, 21, 29);
+    cursor: pointer;
+}
+.closeBtn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(155, 179, 255);
+}
+.addBtns{
+    width: 120px;
+    cursor: pointer;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.userName{
+    color: orange
+}
+
+.textBox{
+    margin-bottom: 10px;
+}

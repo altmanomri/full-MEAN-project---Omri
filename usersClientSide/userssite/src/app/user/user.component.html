@@ -1,0 +1,36 @@
+<div class="container">
+    <div [ngClass]="tasksCompleted ? 'redBox' : 'greenBox'" id="userBox{{userData._id}}">
+        <button class="idBtn" (click)="createTPComp(userData._id)">ID : {{userData._id}}</button> <br /><br />
+
+        Name :<input [required] type="text" name="name" [(ngModel)]="userData.name " /><br />
+        Email : <input type="text" name="email" [(ngModel)]="userData.email" /><br />
+
+        <input class="btnAction" type="submit" (click)="deleteUser()" value="DELETE" />
+
+        <input class="btnAction" type="button" (click)="UpdateUser()" value="UPDATE" />
+        
+        <!-- smiley face added when all tasks are completed -->
+        <img *ngIf="isCompleted" class="smiley" alt="pic"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png"/>
+
+        <!-- other data -->
+        <div class="mainOtherDiv">
+            <div class="OtherDataDiv" (mouseover)="createDataDiv()" (click)="destroyDataDiv()"> OTHER DATA </div>
+            <div class="theData" *ngIf="isDataExist">
+                <div class="locationDiv">
+                    Street :<br />
+                    City : <br />
+                    ZipCode :
+                </div>
+                <div class="InputsDiv">
+                    <input type="text" name="street" [(ngModel)]="userData.street" /><br />
+                    <input type="text" name="city" [(ngModel)]="userData.city" /><br />
+                    <input type="text" name="zipcode" [(ngModel)]="userData.zipcode" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
